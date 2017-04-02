@@ -18,6 +18,7 @@ var filesToCache = [
   '/',
   '/index.html',
   '/js/app.js',
+  '/js/angular.min.js',
   '/css/style.css',
   '/images/bg.jpg',
   '/favicons/android-chrome-192x192.png',
