@@ -5,6 +5,7 @@ body {
   background-color: #000;
   font-family: 'lato';
   margin: 0;
+  overflow: hidden;
 }
 h3 {
   font-size: 28px;
@@ -44,6 +45,7 @@ h3 {
 .main-container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
