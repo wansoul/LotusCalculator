@@ -33,8 +33,15 @@ h3 {
   position: absolute; z-index: 12;
   left: 0; top: 0;
   width: 100%; height: 100%;
+  opacity: 0;
+  transform: translateY(600px);
   transition: all 0.3s ease-in-out;
 }
+.shown-item{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .info-panel{
   position: relative;
   width: 90%; height: 64%;
@@ -82,6 +89,7 @@ h3 {
   overflow: hidden;
   text-indent: 300px;
   opacity: 0.6;
+  z-index: 15;
 }
 .close-button{
   background: url(../assets/close.svg);
@@ -94,11 +102,6 @@ h3 {
 .show-info-button:hover,
 .info-panel > .close-button:hover{
   opacity: .9;
-}
-
-.hidden-item{
-  opacity: 0;
-  transform: translateY(600px);
 }
 
 .info-panel > p{

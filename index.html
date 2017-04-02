@@ -66,10 +66,10 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="show-info-button" title="View Information" ng-init="showInfo=false" ng-hide="showInfo" ng-click="showInfo = !showInfo">Info</div>
 
-	    <div class="info-container" ng-class="{'hidden-item': !showInfo}">
+	    <div class="info-container" ng-class="{'shown-item': showInfo}">
 			<div class="info-panel">
 				<img src="favicons/android-chrome-192x192.png" class="icon" />
 				<h1>Lotus Calculator</h1>
@@ -94,7 +94,7 @@
 
 		<script src="js/angular.min.js"></script>
 		<script src="js/app.js"></script>
-
+<!-- 
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-96596472-1']);
@@ -107,5 +107,5 @@
 		  })();
 
 		</script>
-	</body>
+	</body> -->
 </html>
