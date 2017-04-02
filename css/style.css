@@ -26,13 +26,153 @@ h3 {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+  supported by Chrome and Opera */
 }
+
+.info-container{
+  position: absolute; z-index: 12;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transform: translateY(600px);
+  transition: all 0.3s ease-in-out;
+}
+.shown-item{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.info-panel{
+  position: relative;
+  width: 90%; height: 64%;
+  min-width: 280px;
+  min-height: 450px;
+  max-width: 300px;
+  max-height: 450px;
+  top: 15%;
+  margin: 0 auto;
+  background-color: rgb(236, 241, 230);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.info-panel > .icon{
+  width: 110px; height: 110px;
+  padding: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+  border-radius: 10px;
+  margin-top: -55px;
+}
+
+.info-panel > h1{
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+.info-panel > h2{
+  font-weight: 400;
+  width: 90%;
+  font-size: 16px;
+  opacity: .6;
+  margin: 6px auto 24px auto;
+}
+
+.show-info-button,
+.info-panel > .close-button{
+  position: absolute;
+  width: 32px; height: 32px;
+  right: 12px; top: 12px;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  text-indent: 300px;
+  opacity: 0.6;
+  z-index: 15;
+}
+.close-button{
+  background: url(../assets/close.svg);
+  background-size: cover;
+}
+.show-info-button{
+  background: url(../assets/info.svg);
+  background-size: cover;
+}
+.show-info-button:hover,
+.info-panel > .close-button:hover{
+  opacity: .9;
+}
+
+.info-panel > p{
+  width: 90%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; 
+  font-weight: 300;
+}
+
+/*## CONTACT INFO ####*/
+.contact-info-container{
+  width: 90%;
+  margin: 0 auto;
+}
+.contact-info-container > h3{
+  font-size: 24px;
+  text-align: left;
+  margin-top: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.contact-info-container > h4{
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 4px; 
+  margin-bottom: 4px;
+}
+.avatar{
+  float: left;
+  margin-right: 12px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.social-icons{
+  text-align: left;
+}
+.social-icons > a{
+  width: 32px; height: 32px;
+  display: inline-block;
+  background: url(../assets/behance.svg) no-repeat center;
+  overflow: hidden;
+  text-indent: 100px;
+  margin-right: 4px;
+}
+.social-icons > a:hover{
+  transform: scale(1.2);
+}
+.social-icons > a.behance{
+  margin-left: -4px;
+}
+.social-icons > a.linkedin{
+  background-image: url(../assets/linkedin.svg)
+}
+.social-icons > a.github{
+  background-image: url(../assets/github.svg)
+}
+.social-icons > a.twitter{
+  background-image: url(../assets/twitter.svg)
+}
+
+
+/*## BG IMAGE ####*/
 .bg-image {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url(../images/bg.jpg);
+  background: url(../assets/bg.jpg);
   background-size: cover;
   z-index: 0;
 }
@@ -43,6 +183,9 @@ h3 {
   -ms-filter: blur(10px);
   filter: blur(10px);
 }
+
+
+/*## MAIN VONTAINER ####*/
 .main-container {
   width: 100vw;
   height: 100vh;
