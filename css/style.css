@@ -44,11 +44,9 @@ h3 {
 
 .info-panel{
   position: relative;
-  width: 90%; height: 64%;
+  width: 90%; height: 440px;
   min-width: 280px;
-  min-height: 450px;
   max-width: 300px;
-  max-height: 450px;
   top: 15%;
   margin: 0 auto;
   background-color: rgb(236, 241, 230);
@@ -76,7 +74,7 @@ h3 {
   width: 90%;
   font-size: 16px;
   opacity: .6;
-  margin: 6px auto 24px auto;
+  margin: 6px auto 16px auto;
 }
 
 .show-info-button,
