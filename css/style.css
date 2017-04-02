@@ -102,6 +102,7 @@ h3 {
 .show-info-button:hover,
 .info-panel > .close-button:hover{
   opacity: .9;
+  transform: scale(1.2);
 }
 
 .info-panel > p{
