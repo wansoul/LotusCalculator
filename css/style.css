@@ -1,10 +1,12 @@
 * {
   -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 body {
   background-color: #000;
   font-family: 'lato';
   margin: 0;
+  overflow: hidden;
 }
 h3 {
   font-size: 28px;
@@ -44,6 +46,7 @@ h3 {
 .main-container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
@@ -52,7 +55,7 @@ h3 {
   margin: 0 auto;
   top: 20vh;
   width: 254px;
-  height: 365px;
+  height: 380px;
   z-index: 1;
 }
 .display-container {
@@ -119,7 +122,7 @@ h3 {
   box-shadow: 0 0 8px 0 rgba(72, 3, 23, 0.62);
   z-index: 6;
   font-size: 28px;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.07s ease-in-out;
 }
 .leaf:hover {
   background-color: #F50049;
