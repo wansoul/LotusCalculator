@@ -44,11 +44,9 @@ h3 {
 
 .info-panel{
   position: relative;
-  width: 90%; height: 64%;
+  width: 90%; height: 420px;
   min-width: 280px;
-  min-height: 450px;
   max-width: 300px;
-  max-height: 450px;
   top: 15%;
   margin: 0 auto;
   background-color: rgb(236, 241, 230);
