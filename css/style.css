@@ -1,0 +1,479 @@
+* {
+  -webkit-backface-visibility: hidden;
+}
+body {
+  background-color: #000;
+  font-family: 'lato';
+  margin: 0;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.bg-image {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url(http://www.dingtwist.com/wp-content/uploads/2013/09/lotus-flower.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.calculator-container {
+  position: relative;
+  margin: 0 auto;
+  top: 20vh;
+  width: 254px;
+  height: 365px;
+  z-index: 1;
+}
+.display-container {
+  position: relative;
+  width: 90%;
+  height: 120px;
+  margin: 0 auto;
+}
+.display-container h1,
+.display-container h2 {
+  right: 0;
+  min-width: 100%;
+  position: absolute;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0;
+}
+.display-container h1 {
+  height: 69px;
+  font-weight: 100;
+  font-size: 58px;
+  line-height: 69px;
+  text-align: right;
+  margin-top: -8px;
+  transition: all 0.2s ease-in;
+}
+.display-container h2 {
+  top: 70px;
+  text-align: right;
+  font-weight: 300;
+  font-size: 21px;
+  opacity: 0.75;
+}
+.keys-container {
+  position: relative;
+  width: 100%;
+  height: 254px;
+  margin: 0 auto;
+}
+.back-rectangle {
+  position: absolute;
+  width: 177px;
+  height: 177px;
+  left: 40px;
+  top: 40px;
+  transform: rotate(45deg);
+  background-color: #7F0026;
+  opacity: 0.5;
+}
+.number-leaves-container {
+  position: absolute;
+  width: 204px;
+  height: 204px;
+  margin: 24px;
+  z-index: 3;
+}
+.leaf {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  background-color: #D90845;
+  color: #fff;
+  box-shadow: 0 0 8px 0 rgba(72, 3, 23, 0.62);
+  z-index: 6;
+  font-size: 28px;
+  transition: transform 0.1s ease-in-out;
+}
+.leaf:hover {
+  background-color: #F50049;
+  transform: scaleX(1.1) scaleY(1.1) rotate(45deg);
+}
+.leaf h3 {
+  display: block;
+  margin: 20% 35%;
+  z-index: 10;
+}
+.leaf-corner {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  background-color: #D90845;
+  color: #fff;
+  box-shadow: 0 0 8px 0 rgba(72, 3, 23, 0.62);
+  z-index: 5;
+  transition: transform 0.1s ease-in-out;
+}
+.leaf-corner:hover {
+  background-color: #F50049;
+  transform: scaleX(1.1) scaleY(1.1);
+}
+.leaf-corner h3 {
+  display: block;
+  cursor: pointer;
+  z-index: 10;
+}
+.leaf-5 {
+  left: 70px;
+  top: 70px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+.leaf-5 h3 {
+  transform: rotate(-45deg);
+}
+.leaf-6 {
+  left: 130px;
+  top: 70px;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(45deg);
+}
+.leaf-6 h3 {
+  transform: rotate(-45deg);
+}
+.leaf-4 {
+  left: 12px;
+  top: 70px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+}
+.leaf-4 h3 {
+  transform: rotate(-45deg);
+}
+.leaf-2 {
+  left: 70px;
+  top: 128px;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(45deg);
+}
+.leaf-2 h3 {
+  transform: rotate(-45deg);
+}
+.leaf-8 {
+  left: 70px;
+  top: 12px;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+}
+.leaf-8 h3 {
+  transform: rotate(-45deg);
+}
+.leaf-9 {
+  left: 110px;
+  top: 24px;
+  border-radius: 50% 0 50% 50%;
+}
+.leaf-9 h3 {
+  margin: 3% 62%;
+}
+.leaf-1 {
+  left: 24px;
+  top: 110px;
+  border-radius: 50% 50% 50% 0;
+}
+.leaf-1 h3 {
+  margin: 43% 20%;
+}
+.leaf-3 {
+  left: 110px;
+  top: 110px;
+  border-radius: 50% 50% 0 50%;
+}
+.leaf-3 h3 {
+  margin: 46% 60%;
+}
+.leaf-7 {
+  left: 24px;
+  top: 24px;
+  border-radius: 0 50% 50% 50%;
+}
+.leaf-7 h3 {
+  margin: 3% 20%;
+}
+.operations-leaves-container1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(23deg) scaleX(1.2) scaleY(1.2);
+  z-index: 2;
+}
+.operations-leaves-container1 .leaf-corner {
+  background-color: #A60031;
+}
+.operations-leaves-container1 .leaf-corner:hover {
+  background-color: #DC0041;
+}
+.operations-leaves-container1 h3 {
+  font-size: 21px;
+  font-weight: 400;
+  transform: rotate(-23deg);
+}
+.operations-leaves-container1 h3.minus {
+  margin: 45% 12%;
+}
+.operations-leaves-container1 h3.period {
+  font-size: 30px;
+  margin: 44% 68%;
+}
+.operations-leaves-container1 h3.ac {
+  font-size: 18px;
+  margin: -1% 6%;
+}
+.operations-leaves-container1 h3.multiply {
+  font-size: 19px;
+  margin: 7% 69%;
+}
+.operations-leaves-container2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-46deg);
+  z-index: 1;
+}
+.operations-leaves-container2 h3 {
+  font-size: 21px;
+  font-weight: 400;
+  transform: rotate(23deg);
+}
+.operations-leaves-container2 h3.zero {
+  margin: 68% 13%;
+}
+.operations-leaves-container2 h3.plus {
+  margin: 55% 66%;
+}
+.operations-leaves-container2 h3.divide {
+  margin: 16% 14%;
+}
+.operations-leaves-container2 h3.percent {
+  font-size: 18px;
+  margin: 6% 66%;
+}
+h2.error {
+  color: #F33535;
+  font-weight: 700;
+  -webkit-animation: shake-right 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -moz-animation: shake-right 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-right 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+h2.centered {
+  text-align: center;
+  opacity: .9;
+}
+h1.hide-result {
+  transform: translateY(20px);
+  opacity: 0;
+}
+h1.medium-size {
+  font-size: 42px;
+}
+h1.small-size {
+  font-size: 32px;
+}
+h1.smallest-size {
+  font-size: 22px;
+  font-weight: 300;
+}
+h1.infinity-size {
+  font-size: 62px;
+  opacity: 0.8;
+  line-height: 48px;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2017-4-2 1:26:48
+ * http://animista.net
+ * T: @cssanimista
+ * ---------------------------------------------- */
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -moz-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.scale-up-center1 {
+  -webkit-animation: scale-up-center 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
+  -moz-animation: scale-up-center 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
+  animation: scale-up-center 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
+}
+.scale-up-center2 {
+  -webkit-animation: scale-up-center2 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s both;
+  -moz-animation: scale-up-center2 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s both;
+  animation: scale-up-center2 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s both;
+}
+.scale-up-center3 {
+  -webkit-animation: scale-up-center3 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s both;
+  -moz-animation: scale-up-center3 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s both;
+  animation: scale-up-center3 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s both;
+}
+@-webkit-keyframes shake-right {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+@keyframes shake-right {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.2) rotate(90deg);
+    transform: scale(0.2) rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes scale-up-center2 {
+  0% {
+    -webkit-transform: scale(0.2) rotate(90deg);
+    transform: scale(0.2) rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.2) rotate(23deg);
+    transform: scale(1.2) rotate(23deg);
+    opacity: 1;
+  }
+}
+@keyframes scale-up-center3 {
+  0% {
+    -webkit-transform: scale(0.2) rotate(135deg);
+    transform: scale(0.2) rotate(135deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(45deg);
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+
+//## MEDIA QUERIES ####
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  .calculator-container{
+    -webkit-transform: scale(4);
+    transform: scale(4);
+  }
+}
