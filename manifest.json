@@ -1,6 +1,6 @@
 {
   "short_name": "LotusCalc",
-  "name": "Lotus Calculator",
+  "name": "LotusCalculator",
   "icons": [
         {
             "src": "favicons/android-chrome-192x192.png",
@@ -13,9 +13,9 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#D90845",
+    "background_color": "#000000",
     "display": "standalone",
-    "orientation": "landscape",
-    "start_url": "index.html?launcher=true"
+    "orientation": "portrait",
+    "start_url": "index.html"
 }
