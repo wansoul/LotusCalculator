@@ -15,7 +15,7 @@
 var dataCacheName = 'lotusCal-data-v1';
 var cacheName = 'lotusCalc-1';
 var filesToCache = [
-  '/',
+  '.',
   'index.html',
   'js/app.js',
   'js/angular.min.js',
