@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		
-		<div class="show-info-button" ng-init="showInfo=true" ng-hide="showInfo" ng-click="showInfo = !showInfo">Info</div>
+		<div class="show-info-button" title="View Information" ng-init="showInfo=false" ng-hide="showInfo" ng-click="showInfo = !showInfo">Info</div>
 
 	    <div class="info-container" ng-class="{'hidden-item': !showInfo}">
 			<div class="info-panel">
@@ -88,7 +88,7 @@
 						<a href="https://twitter.com/wansoul" title="Twitter" class="twitter" target="_blank">Twitter</a>
 					</div>
 				</div>
-				<div class="close-button" ng-click="showInfo = !showInfo" >Close</div>
+				<div class="close-button" title="Close this panel" ng-click="showInfo = !showInfo" >Close</div>
 			</div>
 	    </div>
 
