@@ -30,9 +30,9 @@ h3 {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url(http://www.dingtwist.com/wp-content/uploads/2013/09/lotus-flower.jpg);
+  background: url(../images/bg.jpg);
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
 }
 .blur {
   -webkit-filter: blur(10px);
